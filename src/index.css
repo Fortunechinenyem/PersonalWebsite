@@ -1,13 +1,151 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Custom Properties, update these for your own design */
+
+:root {
+  --ff-primary: "Lora", serif;
+  --ff-secondary: "Roboto Slab", serif;
+
+  --fw-reg: 400;
+  --fw-bold: 700;
+
+  --clr-light: rgb(229, 231, 239);
+  --clr-dark: #020233;
+  --clr-accent: #268f7d;
+  --clr-alternate: #0b2c57;
+  --clr-sisi: #0fa1a7;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+/* General styles */
+html {
+  scroll-behavior: smooth;
+}
+
+.body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2.5em;
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* Typography */
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--clr-accent);
+  padding: 1em;
+}
+
+.logo {
+  max-width: 80px;
+  color: var(--clr-light);
+}
+
+.header {
+  justify-content: space-between;
+}
+
+/* Home */
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+
+  /* Flexbox stuff */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+  color: white; /* ADD THIS LINE */
+
+  /* Background styles */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./images/Joshua\ \(4\).jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.heroimage {
+  max-width: 500px;
+}
+
+.herotext {
+}
+
+.footer {
+  background-color: var(--clr-alternate);
+  color: antiquewhite;
 }
